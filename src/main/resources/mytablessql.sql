@@ -43,23 +43,6 @@ CREATE TABLE employees
     CONSTRAINT employees_companies_com_id_fk FOREIGN KEY (emp_com_id) REFERENCES companies (com_id)
 );
 
-CREATE TABLE join_customers_orders
-(
-    jco_id INTEGER PRIMARY KEY NOT NULL,
-    jco_cus_id INTEGER,
-    jco_ord_id INTEGER,
-    CONSTRAINT join_customers_orders_customers_cus_id_fk FOREIGN KEY (jco_cus_id) REFERENCES customers (cus_id),
-    CONSTRAINT join_customers_orders_orders_ord_id_fk FOREIGN KEY (jco_ord_id) REFERENCES orders (ord_id)
-);
-
-CREATE TABLE join_products_orders
-(
-    jpo_id INTEGER PRIMARY KEY NOT NULL,
-    jpo_pro_id INTEGER,
-    jpo_ord_id INTEGER,
-    CONSTRAINT join_products_orders_products_pro_id_fk FOREIGN KEY (jpo_pro_id) REFERENCES products (pro_id),
-    CONSTRAINT join_products_orders_orders_ord_id_fk FOREIGN KEY (jpo_ord_id) REFERENCES orders (ord_id)
-);
 
 CREATE TABLE orders
 (
@@ -82,4 +65,22 @@ CREATE TABLE products
     pro_category VARCHAR(255),
     pro_com_id INTEGER,
     CONSTRAINT products_companies_com_id_fk FOREIGN KEY (pro_com_id) REFERENCES companies (com_id)
+);
+
+CREATE TABLE join_customers_orders
+(
+    jco_id INTEGER PRIMARY KEY NOT NULL,
+    jco_cus_id INTEGER,
+    jco_ord_id INTEGER,
+    CONSTRAINT join_customers_orders_customers_cus_id_fk FOREIGN KEY (jco_cus_id) REFERENCES customers (cus_id),
+    CONSTRAINT join_customers_orders_orders_ord_id_fk FOREIGN KEY (jco_ord_id) REFERENCES orders (ord_id)
+);
+
+CREATE TABLE join_products_orders
+(
+    jpo_id INTEGER PRIMARY KEY NOT NULL,
+    jpo_pro_id INTEGER,
+    jpo_ord_id INTEGER,
+    CONSTRAINT join_products_orders_products_pro_id_fk FOREIGN KEY (jpo_pro_id) REFERENCES products (pro_id),
+    CONSTRAINT join_products_orders_orders_ord_id_fk FOREIGN KEY (jpo_ord_id) REFERENCES orders (ord_id)
 );

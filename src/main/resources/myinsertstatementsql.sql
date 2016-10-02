@@ -18,13 +18,6 @@ INSERT INTO public.employees (emp_id, emp_first_name, emp_last_name, emp_ssn, em
 INSERT INTO public.employees (emp_id, emp_first_name, emp_last_name, emp_ssn, emp_com_id) VALUES (3, 'Cindy', 'Parrilla', '543-546-9876', 3);
 
 
-INSERT INTO public.join_customers_orders (jco_id, jco_cus_id, jco_ord_id) VALUES (1, 1, 2);
-INSERT INTO public.join_customers_orders (jco_id, jco_cus_id, jco_ord_id) VALUES (2, 2, 3);
-INSERT INTO public.join_customers_orders (jco_id, jco_cus_id, jco_ord_id) VALUES (3, 3, 1);
-
-INSERT INTO public.join_products_orders (jpo_id, jpo_pro_id, jpo_ord_id) VALUES (1, 1, 2);
-INSERT INTO public.join_products_orders (jpo_id, jpo_pro_id, jpo_ord_id) VALUES (2, 3, 2);
-INSERT INTO public.join_products_orders (jpo_id, jpo_pro_id, jpo_ord_id) VALUES (3, 3, 1);
 
 INSERT INTO public.orders (ord_id, ord_odr_number, ord_delivery_date, ord_odr_date, ord_cost, ord_com_id) VALUES (1, 34534, '7/27/76', '7/32/78', 4000, 1);
 INSERT INTO public.orders (ord_id, ord_odr_number, ord_delivery_date, ord_odr_date, ord_cost, ord_com_id) VALUES (2, 49340, '10/4/16', '12/2/16', 5000, 2);
@@ -35,4 +28,11 @@ INSERT INTO public.products (pro_id, pro_name, pro_prdt_number, pro_description,
 INSERT INTO public.products (pro_id, pro_name, pro_prdt_number, pro_description, pro_price, pro_category, pro_com_id) VALUES (2, 'file transfe', 64345, 'transfer files', 3000, 'tech', 2);
 INSERT INTO public.products (pro_id, pro_name, pro_prdt_number, pro_description, pro_price, pro_category, pro_com_id) VALUES (3, 'soda', 4342, 'drinkable liquid', 100, 'food', 3);
 
+INSERT INTO public.join_customers_orders (jco_id, jco_cus_id, jco_ord_id) VALUES (1, 1, 2);
+INSERT INTO public.join_customers_orders (jco_id, jco_cus_id, jco_ord_id) VALUES (2, 2, 3);
+INSERT INTO public.join_customers_orders (jco_id, jco_cus_id, jco_ord_id) VALUES (3, 3, 1);
+
+INSERT INTO public.join_products_orders (jpo_id, jpo_pro_id, jpo_ord_id) VALUES (1, 1, 2);
+INSERT INTO public.join_products_orders (jpo_id, jpo_pro_id, jpo_ord_id) VALUES (2, 3, 2);
+INSERT INTO public.join_products_orders (jpo_id, jpo_pro_id, jpo_ord_id) VALUES (3, 3, 1);
 

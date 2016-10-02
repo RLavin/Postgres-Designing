@@ -2,7 +2,7 @@ SELECT * FROM public.customers c
 LEFT OUTER JOIN public.join_customers_orders jco
     ON c.cus_id=jco.jco_cus_id
     LEFT OUTER JOIN public.orders o
-    ON o.ord_id=jsd.jsd_ord_id;
+    ON o.ord_id=jco.jco_ord_id;
 
 SELECT * FROM public.products p
 LEFT OUTER JOIN public.join_products_orders jpo
